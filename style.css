@@ -23,6 +23,9 @@ body {
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: "Noto Sans Runic", sans-serif;
+  background-image: url("./resources/pexels-frank-minjarez-333886454-15241418.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* 6. Improve media defaults */
@@ -75,6 +78,13 @@ h6 {
   isolation: isolate;
 }
 
+button {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+}
+
 .topbar {
   display: flex;
   justify-content: space-around;
@@ -85,7 +95,6 @@ h6 {
 
 .topbar > button {
   width: 10%;
-  border-radius: 20px;
   background-color: rgb(228, 161, 85);
   border: 2px solid rgb(124, 79, 12);
 }
@@ -98,9 +107,69 @@ h6 {
   background-color: rgb(185, 102, 7);
 }
 
-.content {
-  height: 100vh;
-  background-image: url(./pexels-frank-minjarez-333886454-15241418.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.main-content {
+  padding: 30px 5vh;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  color: #fff;
+  padding: 0 20px 20px 20px;
+  background-color: rgba(45, 49, 63, 0.904);
+  border: 1px solid grey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+dialog {
+  padding: 5px 20px 20px 20px;
+  border: none;
+  border-radius: 10px;
+  width: max(300px, 50vw);
+  box-shadow: 2px 2px 10px;
+}
+
+form {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  gap: 20px;
+}
+
+.form-content {
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.row input, .row select {
+  padding: 5px 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
